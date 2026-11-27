@@ -88,13 +88,16 @@ Logs: `docker compose logs -f web` shows one line per request (method, endpoint,
 
 | What | File |
 |---|---|
+| Git push from the Codespace | `screenshots/00-git-push.png` |
+| Pipeline run list (run #1 green) | `screenshots/01-pipeline-run.png` |
 | Pipeline run with all jobs green | `screenshots/01-pipeline-success.png` |
 | Lint and test job logs | `screenshots/02-test-job.png` |
 | A pull request with a failing check (then fixed) | `screenshots/03-failed-then-fixed-pr.png` |
 | Image published in GitHub Packages (GHCR) | `screenshots/04-ghcr-package.png` |
 | Staging deploy and smoke test logs | `screenshots/05-staging-deploy.png` |
-| Environments page (staging, production) | `screenshots/06-environments.png` |
-| Uptime monitor run | `screenshots/07-monitor-run.png` |
+| Staging and production deployments | `screenshots/06-environments.png` |
+| Uptime monitor health check log | `screenshots/07-monitor-run.png` |
+| Uptime monitor runs | `screenshots/07b-monitor-runs.png` |
 | `/version` and `/metrics` output | `screenshots/08-version-metrics.png` |
 | Container logs showing request lines | `screenshots/09-container-logs.png` |
 
