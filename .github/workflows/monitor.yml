@@ -1,0 +1,36 @@
+name: Uptime monitor
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check-health:
+    name: Check production health endpoint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call /health and /version
+        env:
+          APP_URL: ${{ vars.APP_URL }}
+        run: |
+          if [ -z "$APP_URL" ]; then
+            echo "APP_URL variable is not set (Settings > Secrets and variables > Actions > Variables)."
+            echo "Skipping."
+            exit 0
+          fi
+          for attempt in 1 2 3; do
+            if curl -fsS --max-time 30 "$APP_URL/health"; then
+              echo
+              curl -fsS --max-time 30 "$APP_URL/version" || true
+              echo
+              exit 0
+            fi
+            echo "Attempt $attempt failed, retrying in 20s"
+            sleep 20
+          done
+          echo "::error::Health check failed after 3 attempts: $APP_URL"
+          exit 1

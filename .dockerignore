@@ -1,0 +1,14 @@
+.git
+.github
+.env
+.venv
+venv
+__pycache__
+*.pyc
+*.db
+docs
+screenshots
+tests
+scripts
+README.md
+requirements-dev.txt
