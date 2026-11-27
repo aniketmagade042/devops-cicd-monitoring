@@ -84,7 +84,7 @@ Logs: `docker compose logs -f web` shows one line per request (method, endpoint,
 2. Environments: `staging` and `production` (optional required reviewer on production).
 3. Branch protection on `main`: require the `1. Lint and unit tests` and `2. Build image and integration test` checks before merging.
 
-## Evidence (add your screenshots to `screenshots/`)
+## Evidence 
 
 | What | File |
 |---|---|
@@ -101,7 +101,6 @@ Logs: `docker compose logs -f web` shows one line per request (method, endpoint,
 | `/version` and `/metrics` output | `screenshots/08-version-metrics.png` |
 | Container logs showing request lines | `screenshots/09-container-logs.png` |
 
-## Challenges and fixes
 ## Challenges and fixes
 
 - **Screenshots not showing in the commit:** I ran `git add .` from inside the `app/` folder, so the `screenshots/` folder was never staged and the push said "Everything up-to-date". I fixed it by running `git add -A` from the repo root.
