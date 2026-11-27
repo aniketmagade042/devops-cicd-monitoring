@@ -102,8 +102,13 @@ Logs: `docker compose logs -f web` shows one line per request (method, endpoint,
 | Container logs showing request lines | `screenshots/09-container-logs.png` |
 
 ## Challenges and fixes
+## Challenges and fixes
 
-- `<Describe a real problem you hit in the pipeline and how you fixed it>`
+- **Screenshots not showing in the commit:** I ran `git add .` from inside the `app/` folder, so the `screenshots/` folder was never staged and the push said "Everything up-to-date". I fixed it by running `git add -A` from the repo root.
+- **Doubled file extensions (`.png.png`):** Windows added a second extension when I saved screenshots, so the README links were broken. I renamed the files with `git mv` and committed.
+- **Proving the lint gate works:** I opened a PR with a deliberate unused import. The `Lint and unit tests` job failed and the build, publish and deploy jobs were skipped. After I removed the line, all checks passed. This confirms bad code can't reach staging or production.
+
+
 
 ## Author
 
