@@ -14,6 +14,7 @@ Observability endpoints:
   /metrics  request counters in Prometheus text format
 """
 import logging
+import json
 import os
 import sqlite3
 import sys
