@@ -100,7 +100,9 @@ Logs: `docker compose logs -f web` shows one line per request (method, endpoint,
 | Uptime monitor runs | `screenshots/07b-monitor-runs.png` |
 | `/version` and `/metrics` output | `screenshots/08-version-metrics.png` |
 | Container logs showing request lines | `screenshots/09-container-logs.png` |
-
+| Production pipeline, all jobs green (push) | `screenshots/12-prod-pipeline-success.png` |
+| Render deploy triggered by the pipeline | `screenshots/13-render-deploy-hook.png` |
+| Live app with saved messages | `screenshots/14-live-site.png` |
 ## Challenges and fixes
 
 - **Screenshots not showing in the commit:** I ran `git add .` from inside the `app/` folder, so the `screenshots/` folder was never staged and the push said "Everything up-to-date". I fixed it by running `git add -A` from the repo root.
