@@ -5,8 +5,11 @@ A small Flask + PostgreSQL service with a full GitHub Actions pipeline:
 **GitHub -> Build -> Test -> Docker -> Deploy -> Monitor**
 
 [![CI/CD](https://github.com/aniketmagade042/devops-cicd-monitoring/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/aniketmagade042/devops-cicd-monitoring/actions/workflows/ci-cd.yml)
+
 **Live demo:** https://devops-guestbook.onrender.com (free tier, the first load can take about a minute)
+
 Architecture: [docs/architecture.md](docs/architecture.md)
+
 ## Pipeline
 
 ```
