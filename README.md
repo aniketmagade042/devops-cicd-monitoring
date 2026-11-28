@@ -107,6 +107,7 @@ Logs: `docker compose logs -f web` shows one line per request (method, endpoint,
 | Production pipeline, all jobs green (push) | `screenshots/12-prod-pipeline-success.png` |
 | Render deploy triggered by the pipeline | `screenshots/13-render-deploy-hook.png` |
 | Live app with saved messages | `screenshots/14-live-site.png` |
+| Production approval gate waiting for review | `screenshots/15-approval-gate.png` |
 
 ## Challenges and fixes
 
